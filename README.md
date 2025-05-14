@@ -1,5 +1,9 @@
 # Compiler
+**Lex & Yacc 기반 언어 처리 시스템 구현**  <br>
 이 과제들은 컴파일러 설계의 핵심 구성요소인 렉서(lexical analyzer)와 파서(syntax analyzer)의 구현 및 연동을 목적으로 하고 있습니다. 각각의 과제는 특정 기능을 수행하는 컴파일러의 하위 모듈 개발을 통해, 언어의 문법적 구조 분석과 토큰화(tokenization) 과정을 이해하고 실습하는 데 중점을 둡니다.
+
+본 과제의 과제 제출 버전은  [Velog: Lex & Yacc 기반 언어 분석기 개발 과정](https://velog.io/@cheringring/Lex-Yacc-%EA%B8%B0%EB%B0%98-%EC%96%B8%EC%96%B4-%EB%B6%84%EC%84%9D%EA%B8%B0-%EA%B0%9C%EB%B0%9C-%EA%B3%BC%EC%A0%9C) 에 있습니다.
+
 <br>
 
 - 과제 1번-1 line_number.l / input.txt 
@@ -9,6 +13,7 @@
 
 
 ## 과제 1-1: 기본 렉서 구현 (Lex)
+- **파일:** `line_number.l`, `input.txt`
 ### 기술적 목적
 - **정규표현식 기반 토큰화 시스템 구축**
 - **유한 상태 기계(Finite State Machine) 구현**
@@ -25,6 +30,7 @@ int lineno = 1; /* 상태 유지 메커니즘 /
 ```
 
 ## 과제 1-2: 고급 렉서 확장
+- **파일:** `line_number.l`, `data.p`
 ### 기술적 개선점
 - **빈 줄 처리 최적화 알고리즘**
 - **패턴 매칭 엔진 성능 향상**
@@ -38,6 +44,7 @@ int lineno = 1; /* 상태 유지 메커니즘 /
 
 
 ## 과제 2: 구문 분석기 연동
+- **파일:** `mycal_l.l`, `mycal_y.y`, `y.tab.c`, `y.tab.h`
 ### 시스템 아키텍처
 - **LALR(1) 파서 생성기 통합**
 - **연산자 우선순위 계층화**
@@ -52,6 +59,7 @@ expression
 ```
 
 ## 과제 3: 의미 분석기 구현
+- **파일:** `pascal.y`, `scanner2.l`, `y.tab.c`, `pascal.tab.h`, `test.pas`
 ### 핵심 기능
 - **BNF 기반 확장 문법 지원**
 - **동적 심볼 테이블 관리**
